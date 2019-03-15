@@ -18,6 +18,12 @@ Apache internals to link ModSecurity to nginx. This current version is closer
 to nginx, consuming the new libmodsecurity which is no longer dependent on
 Apache. As a result, this current version has less dependencies, fewer bugs, and is faster. In addition, some new functionality is also provided - such as the possibility of use of global rules configuration with per directory/location customizations (e.g. SecRuleRemoveById).
 
+# Additional changes
+
+* It has fix for issue: https://github.com/SpiderLabs/ModSecurity-nginx/issues/61
+* It won't work if gzip encoded response is coming from other servers or in case of `gzip static on;` mode
+* It'll work if gzip is being done by same nginx server which has modsecurity WAF
+
 
 # Compilation
 
